@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import PropTypes, { InferProps } from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 import { ForwardedRef, forwardRef } from 'react';
@@ -21,9 +22,9 @@ const Page = forwardRef(
         <title>{`${title} | React MUI Boilerplate`}</title>
         {meta}
       </Helmet>
-      <div ref={ref} {...other}>
+      <Box ref={ref} {...other}>
         {children}
-      </div>
+      </Box>
     </>
   )
 );
