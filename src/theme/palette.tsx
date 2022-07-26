@@ -63,16 +63,16 @@ const WARNING = {
   light: '#FFE16A',
   main: '#FFC107',
   dark: '#b98303',
-  darker: '#7A4F01',
+  darker: '#6e4803',
   contrastText: GREY[800],
 };
 const ERROR = {
   lighter: '#FFE7D9',
   light: '#FFA48D',
-  main: '#FF4842',
+  main: '#FD4842',
   dark: '#B72136',
-  darker: '#7A0C2E',
-  contrastText: GREY[0],
+  darker: '#6b0726',
+  contrastText: GREY[800],
 };
 
 const GRADIENTS = {

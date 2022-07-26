@@ -9,6 +9,7 @@ import {
 import palette from './palette';
 import typography from './typography';
 import breakpoints from './breakpoints';
+import componentsOverride from './overrides';
 import shadows, { customShadows } from './shadows';
 import { ANY } from '../types';
 
@@ -36,6 +37,7 @@ function ThemeProvider({ children }: ThemeProviderTypes) {
   );
 
   const theme = createTheme(themeOptions);
+  theme.components = componentsOverride(theme);
 
   return (
     <StyledEngineProvider injectFirst>
