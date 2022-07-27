@@ -1,13 +1,16 @@
 import Router from './routes';
 import ThemeProvider from './theme';
+import ThemeLocalization from './components/ThemeLocalization';
 import RtlLayout from './components/RtlLayout';
 
 function App() {
   return (
     <ThemeProvider>
-      <RtlLayout>
-        <Router />
-      </RtlLayout>
+      <ThemeLocalization>
+        <RtlLayout>
+          <Router />
+        </RtlLayout>
+      </ThemeLocalization>
     </ThemeProvider>
   );
 }
