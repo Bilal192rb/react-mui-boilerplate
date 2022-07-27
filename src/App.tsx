@@ -1,10 +1,13 @@
 import Router from './routes';
 import ThemeProvider from './theme';
+import RtlLayout from './components/RtlLayout';
 
 function App() {
   return (
     <ThemeProvider>
-      <Router />
+      <RtlLayout>
+        <Router />
+      </RtlLayout>
     </ThemeProvider>
   );
 }
