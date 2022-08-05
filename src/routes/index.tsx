@@ -1,5 +1,5 @@
 import { Suspense, lazy, ComponentType } from 'react';
-import { Navigate, useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes, useLocation } from 'react-router-dom';
 import LoadingScreen from '../components/LoadingScreen';
 import DashboardLayout from '../layouts/DashboardLayout';
 import UserLayout from '../layouts/UserLayout';
@@ -9,8 +9,11 @@ import CommonLayout from '../layouts/CommonLayout';
 import { ANY } from '../types';
 
 const Loadable = (Component: ComponentType<ANY>) => (props: ANY) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { pathname } = useLocation();
+
   return (
-    <Suspense fallback={<LoadingScreen />}>
+    <Suspense fallback={<LoadingScreen isFullScreen={!pathname.startsWith('/dashboard')} />}>
       <Component {...props} />
     </Suspense>
   );
