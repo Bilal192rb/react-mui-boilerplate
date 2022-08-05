@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import PropTypes, { InferProps } from 'prop-types';
 import { ForwardedRef, forwardRef } from 'react';
 import { ANY } from '../types';
@@ -14,9 +15,9 @@ const Page = forwardRef(
     ref: ForwardedRef<ANY>
   ) => (
     <>
-      <div ref={ref} {...other}>
+      <Box ref={ref} {...other}>
         {children}
-      </div>
+      </Box>
     </>
   )
 );
