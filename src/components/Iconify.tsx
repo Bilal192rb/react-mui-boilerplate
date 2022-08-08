@@ -11,7 +11,7 @@ const IconifyPropTypes = {
 
 type IconifyTypes = InferProps<typeof IconifyPropTypes>;
 
-function Iconify({ icon, sx, other }: IconifyTypes | ANY) {
+function Iconify({ icon, sx, other }: IconifyTypes) {
   return <Box component={Icon} icon={icon} sx={{ ...sx }} {...other} />;
 }
 
