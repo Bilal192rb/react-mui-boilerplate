@@ -17,6 +17,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const LoadingScreenPropTypes = {
   isFullScreen: PropTypes.bool,
+  other: PropTypes.any,
 };
 
 type LoadingScreenTypes = InferProps<typeof LoadingScreenPropTypes>;
@@ -25,7 +26,7 @@ const LoadingScreenDefaultProps: LoadingScreenTypes = {
   isFullScreen: true,
 };
 
-function LoadingScreen({ isFullScreen, ...other }: LoadingScreenTypes) {
+function LoadingScreen({ isFullScreen, other }: LoadingScreenTypes) {
   return (
     <>
       <ProgressBar />

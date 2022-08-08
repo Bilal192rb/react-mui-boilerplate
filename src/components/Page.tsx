@@ -8,13 +8,14 @@ const PagePropTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
   meta: PropTypes.node,
+  other: PropTypes.any,
 };
 
 type PageTypes = InferProps<typeof PagePropTypes>;
 
 const Page = forwardRef(
   (
-    { children, title = 'React MUI Boilerplate', meta, ...other }: PageTypes,
+    { children, title = 'React MUI Boilerplate', meta, other }: PageTypes,
     ref: ForwardedRef<ANY>
   ) => (
     <>
