@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import { GlobalStyles, IconButton } from '@mui/material';
 import { ANY } from '../types';
 import SnackbarIcon from './SnackbarIcon';
-import { Icon } from '@iconify/react';
+import Iconify from './Iconify';
 
 function SnackbarStyles() {
   const theme: ANY = useTheme();
@@ -85,7 +85,7 @@ function NotistackProvider({ children }: NotistackProviderTypes) {
             }}
             sx={{ p: 0.5 }}
           >
-            <Icon icon={'eva:close-fill'} />
+            <Iconify icon={'eva:close-fill'} />
           </IconButton>
         )}
       >
