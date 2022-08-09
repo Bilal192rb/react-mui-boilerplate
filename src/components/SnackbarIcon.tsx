@@ -2,17 +2,17 @@ import PropTypes, { InferProps } from 'prop-types';
 import { alpha } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { ANY } from '../types';
-import { Icon } from '@iconify/react';
+import Iconify from './Iconify';
 
 const SnackbarIconPropTypes = {
   icon: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error']).isRequired,
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error'])
+    .isRequired,
 };
 
 type SnackbarIconTypes = InferProps<typeof SnackbarIconPropTypes>;
 
 function SnackbarIcon({ icon, color }: SnackbarIconTypes) {
-  
   return (
     <Box
       component='span'
@@ -28,7 +28,7 @@ function SnackbarIcon({ icon, color }: SnackbarIconTypes) {
         bgcolor: (theme: ANY) => alpha(theme.palette[color].main, 0.16),
       }}
     >
-      <Icon icon={icon} width={24} height={24} />
+      <Iconify icon={icon} other={{ width: 24, height: 24 }} />
     </Box>
   );
 }
