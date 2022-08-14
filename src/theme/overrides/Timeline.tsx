@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Timeline(theme: ANY) {
+export default function Timeline(theme: Any) {
   return {
     MuiTimelineDot: {
       styleOverrides: {

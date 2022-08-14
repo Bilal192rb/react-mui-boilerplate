@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function ControlLabel(theme: ANY) {
+export default function ControlLabel(theme: Any) {
   return {
     MuiFormControlLabel: {
       styleOverrides: {

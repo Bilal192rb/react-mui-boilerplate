@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Paper(theme: ANY) {
+export default function Paper(theme: Any) {
   return {
     MuiPaper: {
       defaultProps: {

@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Button(theme: ANY) {
+export default function Button(theme: Any) {
   return {
     MuiButton: {
       styleOverrides: {

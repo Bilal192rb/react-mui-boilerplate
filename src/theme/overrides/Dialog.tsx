@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Dialog(theme: ANY) {
+export default function Dialog(theme: Any) {
   return {
     MuiDialog: {
       styleOverrides: {

@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function DataGrid(theme: ANY) {
+export default function DataGrid(theme: Any) {
   return {
     MuiDataGrid: {
       styleOverrides: {

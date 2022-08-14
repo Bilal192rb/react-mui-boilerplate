@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { CheckboxIcon, CheckboxCheckedIcon, CheckboxIndeterminateIcon } from './CustomIcons';
 
-export default function Checkbox(theme: ANY) {
+export default function Checkbox(theme: Any) {
   return {
     MuiCheckbox: {
       defaultProps: {

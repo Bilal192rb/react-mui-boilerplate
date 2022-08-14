@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Tabs(theme: ANY) {
+export default function Tabs(theme: Any) {
   return {
     MuiTab: {
       styleOverrides: {

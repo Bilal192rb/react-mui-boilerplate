@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Accordion(theme: ANY) {
+export default function Accordion(theme: Any) {
   return {
     MuiAccordion: {
       styleOverrides: {

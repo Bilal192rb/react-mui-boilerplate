@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Card(theme: ANY) {
+export default function Card(theme: Any) {
   return {
     MuiCard: {
       styleOverrides: {

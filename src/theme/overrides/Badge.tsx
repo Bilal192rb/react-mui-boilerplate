@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Badge(theme: ANY) {
+export default function Badge(theme: Any) {
   return {
     MuiBadge: {
       styleOverrides: {

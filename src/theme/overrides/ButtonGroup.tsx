@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function ButtonGroup(theme: ANY) {
+export default function ButtonGroup(theme: Any) {
   const styleContained = (color: string) => ({
     props: { variant: 'contained', color },
     style: { boxShadow: theme.customShadows[color] },

@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { alpha } from '@mui/material/styles';
 
-export default function ToggleButton(theme: ANY) {
+export default function ToggleButton(theme: Any) {
   const style = (color: string) => ({
     props: { color },
     style: {

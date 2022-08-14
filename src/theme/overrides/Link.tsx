@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Link(theme: ANY) {
+export default function Link(theme: Any) {
   return {
     MuiLink: {
       defaultProps: {

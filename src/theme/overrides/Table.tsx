@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Table(theme: ANY) {
+export default function Table(theme: Any) {
   return {
     MuiTableRow: {
       styleOverrides: {

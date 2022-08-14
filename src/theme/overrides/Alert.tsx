@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './CustomIcons';
 
-export default function Alert(theme: ANY) {
+export default function Alert(theme: Any) {
   const isLight = theme.palette.mode === 'light';
 
   const standardStyle = (color: string) => ({

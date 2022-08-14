@@ -1,4 +1,4 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import Fab from './Fab';
 import Card from './Card';
 import Chip from './Chip';
@@ -42,7 +42,7 @@ import ToggleButton from './ToggleButton';
 import ControlLabel from './ControlLabel';
 import LoadingButton from './LoadingButton';
 
-export default function ComponentsOverrides(theme: ANY) {
+export default function ComponentsOverrides(theme: Any) {
   return Object.assign(
     Fab(theme),
     Tabs(theme),

@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function CssBaseline(theme: ANY) {
+export default function CssBaseline(theme: Any) {
   return {
     MuiCssBaseline: {
       styleOverrides: {

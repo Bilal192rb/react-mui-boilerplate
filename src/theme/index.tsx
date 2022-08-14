@@ -11,7 +11,7 @@ import typography from './typography';
 import breakpoints from './breakpoints';
 import componentsOverride from './overrides';
 import shadows, { customShadows } from './shadows';
-import { ANY } from '../types';
+import { Any } from '../types';
 
 const ThemeProviderPropTypes = {
   children: PropTypes.node,
@@ -23,7 +23,7 @@ function ThemeProvider({ children }: ThemeProviderTypes) {
   const { themeMode, themeDirection } = { themeMode: 'light', themeDirection: 'ltr' };
   const isLight = themeMode === 'light';
 
-  const themeOptions: ANY = useMemo(
+  const themeOptions: Any = useMemo(
     () => ({
       palette: isLight ? palette.light : palette.dark,
       typography,

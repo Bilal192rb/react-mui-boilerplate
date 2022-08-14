@@ -1,7 +1,6 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { Icon } from '@iconify/react';
 import { Box } from '@mui/material';
-import { ANY } from '../types';
 
 const IconifyPropTypes = {
   icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),

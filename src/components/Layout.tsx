@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import PropTypes, { InferProps } from 'prop-types';
 import { ForwardedRef, forwardRef } from 'react';
-import { ANY } from '../types';
+import { Any } from '../types';
 
 const LayoutPropTypes = {
   children: PropTypes.node.isRequired,
@@ -10,7 +10,7 @@ const LayoutPropTypes = {
 
 type LayoutTypes = InferProps<typeof LayoutPropTypes>;
 
-const Page = forwardRef(({ children, other }: LayoutTypes, ref: ForwardedRef<ANY>) => (
+const Page = forwardRef(({ children, other }: LayoutTypes, ref: ForwardedRef<Any>) => (
   <>
     <Box ref={ref} {...other}>
       {children}

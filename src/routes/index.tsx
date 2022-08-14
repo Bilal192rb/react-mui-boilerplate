@@ -6,9 +6,9 @@ import UserLayout from '../layouts/UserLayout';
 import AuthLayout from '../layouts/AuthLayout';
 import HomeLayout from '../layouts/HomeLayout';
 import CommonLayout from '../layouts/CommonLayout';
-import { ANY } from '../types';
+import { Any } from '../types';
 
-const Loadable = (Component: ComponentType<ANY>) => (props: ANY) => {
+const Loadable = (Component: ComponentType<Any>) => (props: Any) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { pathname } = useLocation();
 

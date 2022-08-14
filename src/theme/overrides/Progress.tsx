@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Progress(theme: ANY) {
+export default function Progress(theme: Any) {
   const isLight = theme.palette.mode === 'light';
 
   return {

@@ -1,7 +1,7 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { alpha } from '@mui/material/styles';
 import { Box } from '@mui/material';
-import { ANY } from '../types';
+import { Any } from '../types';
 import Iconify from './Iconify';
 
 const SnackbarIconPropTypes = {
@@ -25,7 +25,7 @@ function SnackbarIcon({ icon, color }: SnackbarIconTypes) {
         alignItems: 'center',
         justifyContent: 'center',
         color: `${color}.main`,
-        bgcolor: (theme: ANY) => alpha(theme.palette[color].main, 0.16),
+        bgcolor: (theme: Any) => alpha(theme.palette[color].main, 0.16),
       }}
     >
       <Iconify icon={icon} other={{ width: 24, height: 24 }} />
