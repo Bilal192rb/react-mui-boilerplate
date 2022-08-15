@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Typography(theme: ANY) {
+export default function Typography(theme: Any) {
   return {
     MuiTypography: {
       styleOverrides: {

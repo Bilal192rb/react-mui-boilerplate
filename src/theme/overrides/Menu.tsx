@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Menu(theme: ANY) {
+export default function Menu(theme: Any) {
   return {
     MuiMenuItem: {
       styleOverrides: {

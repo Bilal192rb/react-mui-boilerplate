@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function SvgIcon(theme: ANY) {
+export default function SvgIcon(theme: Any) {
   return {
     MuiSvgIcon: {
       styleOverrides: {

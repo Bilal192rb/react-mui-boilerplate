@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { alpha } from '@mui/material/styles';
 
-export default function Backdrop(theme: ANY) {
+export default function Backdrop(theme: Any) {
   const varLow = alpha(theme.palette.grey[900], 0.48);
   const varHigh = alpha(theme.palette.grey[900], 1);
 

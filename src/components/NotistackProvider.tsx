@@ -3,12 +3,12 @@ import { useRef } from 'react';
 import { SnackbarProvider } from 'notistack';
 import { useTheme } from '@mui/material/styles';
 import { GlobalStyles, IconButton } from '@mui/material';
-import { ANY } from '../types';
+import { Any } from '../types';
 import SnackbarIcon from './SnackbarIcon';
 import Iconify from './Iconify';
 
 function SnackbarStyles() {
-  const theme: ANY = useTheme();
+  const theme: Any = useTheme();
   const isLight = theme.palette.mode === 'light';
 
   return (
@@ -54,7 +54,7 @@ const NotistackProviderPropTypes = {
 type NotistackProviderTypes = InferProps<typeof NotistackProviderPropTypes>;
 
 function NotistackProvider({ children }: NotistackProviderTypes) {
-  const notistackRef: ANY = useRef(null);
+  const notistackRef: Any = useRef(null);
 
   return (
     <>

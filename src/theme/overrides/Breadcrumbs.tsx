@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Breadcrumbs(theme: ANY) {
+export default function Breadcrumbs(theme: Any) {
   return {
     MuiBreadcrumbs: {
       styleOverrides: {

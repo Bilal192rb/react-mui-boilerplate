@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { CloseIcon } from './CustomIcons';
 
-export default function Chip(theme: ANY) {
+export default function Chip(theme: Any) {
   return {
     MuiChip: {
       defaultProps: {

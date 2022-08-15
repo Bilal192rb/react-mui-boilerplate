@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Popover(theme: ANY) {
+export default function Popover(theme: Any) {
   return {
     MuiPopover: {
       styleOverrides: {

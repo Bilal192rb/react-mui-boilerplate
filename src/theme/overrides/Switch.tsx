@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Switch(theme: ANY) {
+export default function Switch(theme: Any) {
   const isLight = theme.palette.mode === 'light';
 
   return {

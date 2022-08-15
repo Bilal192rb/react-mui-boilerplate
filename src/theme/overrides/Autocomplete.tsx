@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Autocomplete(theme: ANY) {
+export default function Autocomplete(theme: Any) {
   return {
     MuiAutocomplete: {
       styleOverrides: {

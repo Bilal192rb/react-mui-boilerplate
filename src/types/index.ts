@@ -1,1 +1,1 @@
-export type ANY = any;
+export type Any = any;

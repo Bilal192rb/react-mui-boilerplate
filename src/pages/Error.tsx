@@ -1,7 +1,7 @@
 import Page from '../components/Page';
-import { ANY } from '../types';
+import { Any } from '../types';
 
-function Error({ code = '' }: ANY) {
+function Error({ code = '' }: Any) {
   return (
     <Page title={`Error ${code}`}>
       <h2>Error {code}</h2>

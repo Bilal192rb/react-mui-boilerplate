@@ -1,7 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 import { Variant } from '@mui/material/styles/createTypography';
 import useResponsive from '../hooks/useResponsive';
-import { ANY } from '../types';
+import { Any } from '../types';
 
 export default function GetFontValue(variant: Variant) {
   const theme = useTheme();
@@ -17,7 +17,7 @@ export default function GetFontValue(variant: Variant) {
     variant === 'h5' ||
     variant === 'h6';
 
-  const getFont: ANY =
+  const getFont: Any =
     hasResponsive && theme.typography[variant][key]
       ? theme.typography[variant][key]
       : theme.typography[variant];
@@ -38,7 +38,7 @@ export function pxToRem(value: number) {
   return `${value / 16}rem`;
 }
 
-export function responsiveFontSizes({ sm, md, lg }: ANY) {
+export function responsiveFontSizes({ sm, md, lg }: Any) {
   return {
     '@media (min-width:600px)': {
       fontSize: pxToRem(sm),
@@ -54,7 +54,7 @@ export function responsiveFontSizes({ sm, md, lg }: ANY) {
 
 function useWidth() {
   const theme = useTheme();
-  const keys: Array<ANY> = [...theme.breakpoints.keys].reverse();
+  const keys: Array<Any> = [...theme.breakpoints.keys].reverse();
   return (
     keys.reduce((output, key) => {
       // eslint-disable-next-line react-hooks/rules-of-hooks

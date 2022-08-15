@@ -1,7 +1,7 @@
 import { alpha } from '@mui/material/styles';
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Pagination(theme: ANY) {
+export default function Pagination(theme: Any) {
   return {
     MuiPaginationItem: {
       styleOverrides: {

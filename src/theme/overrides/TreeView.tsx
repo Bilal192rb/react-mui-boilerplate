@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { TreeViewCollapseIcon, TreeViewExpandIcon, TreeViewEndIcon } from './CustomIcons';
 
-export default function TreeView(theme: ANY) {
+export default function TreeView(theme: Any) {
   return {
     MuiTreeView: {
       defaultProps: {

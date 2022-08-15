@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Stepper(theme: ANY) {
+export default function Stepper(theme: Any) {
   return {
     MuiStepConnector: {
       styleOverrides: {

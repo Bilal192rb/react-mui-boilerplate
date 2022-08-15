@@ -1,7 +1,7 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 import { alpha } from '@mui/material';
 
-export default function Drawer(theme: ANY) {
+export default function Drawer(theme: Any) {
   const isLight = theme.palette.mode === 'light';
 
   return {

@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function List(theme: ANY) {
+export default function List(theme: Any) {
   return {
     MuiListItemIcon: {
       styleOverrides: {

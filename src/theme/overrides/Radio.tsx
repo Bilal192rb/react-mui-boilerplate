@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Radio(theme: ANY) {
+export default function Radio(theme: Any) {
   return {
     MuiRadio: {
       styleOverrides: {

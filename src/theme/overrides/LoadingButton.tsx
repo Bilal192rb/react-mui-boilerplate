@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function LoadingButton(theme: ANY) {
+export default function LoadingButton(theme: Any) {
   return {
     MuiLoadingButton: {
       styleOverrides: {

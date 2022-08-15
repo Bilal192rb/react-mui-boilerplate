@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Skeleton(theme: ANY) {
+export default function Skeleton(theme: Any) {
   return {
     MuiSkeleton: {
       defaultProps: {

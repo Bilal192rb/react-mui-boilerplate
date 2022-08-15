@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Avatar(theme: ANY) {
+export default function Avatar(theme: Any) {
   return {
     MuiAvatar: {
       styleOverrides: {

@@ -1,6 +1,6 @@
-import { ANY } from '../../types';
+import { Any } from '../../types';
 
-export default function Input(theme: ANY) {
+export default function Input(theme: Any) {
   return {
     MuiInputBase: {
       styleOverrides: {
