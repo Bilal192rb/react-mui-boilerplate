@@ -12,12 +12,18 @@ httpInstance.interceptors.response.use(
 	error => Promise.reject(error)
 );
 
+const setAuthorization = (accessToken: string | null) => {
+  if (accessToken) httpInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+  else delete httpInstance.defaults.headers.common.Authorization;
+};
+
 const http = {
   request: httpInstance.request,
   get: httpInstance.get,
   post: httpInstance.post,
   put: httpInstance.put,
   delete: httpInstance.delete,
+  setAuthorization,
 };
 
 export default http;
