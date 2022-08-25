@@ -8,9 +8,8 @@ const httpConfig = {
 const httpInstance = axios.create(httpConfig);
 
 httpInstance.interceptors.response.use(
-  (response) => response.data,
-  (error) =>
-    Promise.reject((error.response && error.response.data) || { message: 'Something went wrong' })
+  response => Promise.resolve(response),
+	error => Promise.reject(error)
 );
 
 const http = {
