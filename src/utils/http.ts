@@ -8,8 +8,23 @@ const httpConfig = {
 const httpInstance = axios.create(httpConfig);
 
 httpInstance.interceptors.response.use(
-  response => Promise.resolve(response),
-	error => Promise.reject(error)
+  (response) => {
+    const { data, ...__response } = response;
+    return Promise.resolve({ ...data, __response });
+  },
+  (error) => {
+    const { data, ...__response } = error.response.data
+      ? error.response
+      : {
+          data: { message: 'Something went wrong' },
+          status: 400,
+          statusText: 'ERROR',
+          headers: {},
+          config: {},
+          request: {},
+        };
+    return Promise.reject({ ...data, __response });
+  }
 );
 
 const setAuthorization = (accessToken: string | null) => {
