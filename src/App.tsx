@@ -1,22 +1,25 @@
-import Router from './routes';
-import ThemeProvider from './theme';
-import ThemeLocalization from './components/ThemeLocalization';
-import RtlLayout from './components/RtlLayout';
-import NotistackProvider from './components/NotistackProvider';
-import { ProgressBarStyle } from './components/ProgressBar';
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <ThemeProvider>
-      <ThemeLocalization>
-        <RtlLayout>
-          <NotistackProvider>
-            <ProgressBarStyle />
-            <Router />
-          </NotistackProvider>
-        </RtlLayout>
-      </ThemeLocalization>
-    </ThemeProvider>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
