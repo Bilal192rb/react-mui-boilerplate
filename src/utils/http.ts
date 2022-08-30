@@ -8,10 +8,29 @@ const httpConfig = {
 const httpInstance = axios.create(httpConfig);
 
 httpInstance.interceptors.response.use(
-  (response) => response.data,
-  (error) =>
-    Promise.reject((error.response && error.response.data) || { message: 'Something went wrong' })
+  (response) => {
+    const { data, ...__response } = response;
+    return Promise.resolve({ ...data, __response });
+  },
+  (error) => {
+    const { data, ...__response } = error.response.data
+      ? error.response
+      : {
+          data: { message: 'Something went wrong' },
+          status: 400,
+          statusText: 'ERROR',
+          headers: {},
+          config: {},
+          request: {},
+        };
+    return Promise.reject({ ...data, __response });
+  }
 );
+
+const setAuthorization = (accessToken: string | null) => {
+  if (accessToken) httpInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+  else delete httpInstance.defaults.headers.common.Authorization;
+};
 
 const http = {
   request: httpInstance.request,
@@ -19,6 +38,7 @@ const http = {
   post: httpInstance.post,
   put: httpInstance.put,
   delete: httpInstance.delete,
+  setAuthorization,
 };
 
 export default http;

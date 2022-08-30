@@ -79,8 +79,6 @@ function NotistackProvider({ children }: NotistackProviderTypes) {
           <IconButton
             size='small'
             onClick={() => {
-              console.log(snackbarId);
-
               notistackRef.current.closeSnackbar(snackbarId);
             }}
             sx={{ p: 0.5 }}
