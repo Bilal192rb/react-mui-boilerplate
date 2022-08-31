@@ -12,6 +12,7 @@ import breakpoints from './breakpoints';
 import componentsOverride from './overrides';
 import shadows, { customShadows } from './shadows';
 import { Any } from '../types';
+import useLocales from '../hooks/useLocales';
 
 const ThemeProviderPropTypes = {
   children: PropTypes.node,
@@ -20,7 +21,10 @@ const ThemeProviderPropTypes = {
 type ThemeProviderTypes = InferProps<typeof ThemeProviderPropTypes>;
 
 function ThemeProvider({ children }: ThemeProviderTypes) {
-  const { themeMode, themeDirection } = { themeMode: 'light', themeDirection: 'ltr' };
+  const { themeMode } = { themeMode: 'light' };
+
+  const { currentLang } = useLocales();
+  
   const isLight = themeMode === 'light';
 
   const themeOptions: Any = useMemo(
@@ -29,11 +33,11 @@ function ThemeProvider({ children }: ThemeProviderTypes) {
       typography,
       breakpoints,
       shape: { borderRadius: 8 },
-      direction: themeDirection,
+      direction: currentLang.direction,
       shadows: isLight ? shadows.light : shadows.dark,
       customShadows: isLight ? customShadows.light : customShadows.dark,
     }),
-    [isLight, themeDirection]
+    [isLight, currentLang]
   );
 
   const theme = createTheme(themeOptions);
