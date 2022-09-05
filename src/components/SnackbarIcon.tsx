@@ -28,7 +28,7 @@ function SnackbarIcon({ icon, color }: SnackbarIconTypes) {
         bgcolor: (theme: Any) => alpha(theme.palette[color].main, 0.16),
       }}
     >
-      <Iconify icon={icon} other={{ width: 24, height: 24 }} />
+      <Iconify icon={icon} width={24} height={24} />
     </Box>
   );
 }

@@ -1,6 +1,7 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { styled } from '@mui/material/styles';
 import ProgressBar from './ProgressBar';
+import { AnyObject } from '../types';
 
 const RootStyle = styled('div')(({ theme }) => ({
   right: 0,
@@ -17,16 +18,15 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const LoadingScreenPropTypes = {
   isFullScreen: PropTypes.bool,
-  other: PropTypes.any,
 };
 
-type LoadingScreenTypes = InferProps<typeof LoadingScreenPropTypes>;
+type LoadingScreenTypes = InferProps<typeof LoadingScreenPropTypes> | AnyObject;
 
 const LoadingScreenDefaultProps: LoadingScreenTypes = {
   isFullScreen: true,
 };
 
-function LoadingScreen({ isFullScreen, other }: LoadingScreenTypes) {
+function LoadingScreen({ isFullScreen, ...other }: LoadingScreenTypes) {
   return (
     <>
       <ProgressBar />
