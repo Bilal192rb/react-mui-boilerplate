@@ -13,6 +13,7 @@ import componentsOverride from './overrides';
 import shadows, { customShadows } from './shadows';
 import { Any } from '../types';
 import useLocales from '../hooks/useLocales';
+import useThemeMode from '../hooks/useThemeMode';
 
 const ThemeProviderPropTypes = {
   children: PropTypes.node,
@@ -21,8 +22,7 @@ const ThemeProviderPropTypes = {
 type ThemeProviderTypes = InferProps<typeof ThemeProviderPropTypes>;
 
 function ThemeProvider({ children }: ThemeProviderTypes) {
-  const { themeMode } = { themeMode: 'light' };
-
+  const themeMode = useThemeMode();
   const { currentLang } = useLocales();
   
   const isLight = themeMode === 'light';
