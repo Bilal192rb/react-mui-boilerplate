@@ -26,10 +26,10 @@ function FormCheckbox({ name, label, ...other }: FormCheckboxTypes) {
         <Controller
           name={name}
           control={control}
-          render={({ field }) => <Checkbox {...field} checked={field.value} />}
+          render={({ field }: Any) => <Checkbox {...field} checked={field.value} />}
         />
       }
-      label
+      label={label}
       {...other}
     />
   );
@@ -42,7 +42,7 @@ function FormMultiCheckbox({ name, options, ...other }: FormMultiCheckboxTypes) 
     <Controller
       name={name}
       control={control}
-      render={({ field }) => {
+      render={({ field }: Any) => {
         const onSelected = (option: Any) =>
           field.value.includes(option)
             ? field.value.filter((value: Any) => value !== option)

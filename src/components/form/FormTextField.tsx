@@ -1,7 +1,7 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { useFormContext, Controller } from 'react-hook-form';
 import { TextField } from '@mui/material';
-import { AnyObject } from '../../types';
+import { Any, AnyObject } from '../../types';
 
 const formTextFieldPropTypes = {
   name: PropTypes.string.isRequired,
@@ -16,7 +16,7 @@ function FormTextField({ name, ...other }: FormTextFieldTypes) {
     <Controller
       name={name}
       control={control}
-      render={({ field, fieldState: { error } }) => (
+      render={({ field, fieldState: { error } }: Any) => (
         <TextField {...field} fullWidth error={!!error} helperText={error?.message} {...other} />
       )}
     />

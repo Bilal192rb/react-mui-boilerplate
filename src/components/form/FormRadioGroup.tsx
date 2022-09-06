@@ -18,7 +18,7 @@ function FormRadioGroup({ name, options, getOptionLabel, ...other }: FormRadioGr
     <Controller
       name={name}
       control={control}
-      render={({ field, fieldState: { error } }) => (
+      render={({ field, fieldState: { error } }: Any) => (
         <div>
           <RadioGroup {...field} row {...other}>
             {options.map((option: Any, index: number) => (

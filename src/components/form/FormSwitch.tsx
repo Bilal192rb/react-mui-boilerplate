@@ -1,7 +1,7 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { useFormContext, Controller } from 'react-hook-form';
 import { Switch, FormControlLabel } from '@mui/material';
-import { AnyObject } from '../../types';
+import { Any, AnyObject } from '../../types';
 
 const formSwitchPropTypes = {
   name: PropTypes.string.isRequired,
@@ -18,7 +18,7 @@ function FormSwitch({ name, ...other }: FormSwitchTypes) {
         <Controller
           name={name}
           control={control}
-          render={({ field }) => <Switch {...field} checked={field.value} />}
+          render={({ field }: Any) => <Switch {...field} checked={field.value} />}
         />
       }
       label={''}
