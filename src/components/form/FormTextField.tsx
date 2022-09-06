@@ -1,12 +1,13 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { useFormContext, Controller } from 'react-hook-form';
 import { TextField } from '@mui/material';
+import { AnyObject } from '../../types';
 
 const formTextFieldPropTypes = {
   name: PropTypes.string.isRequired,
 };
 
-type FormTextFieldTypes = InferProps<typeof formTextFieldPropTypes>;
+type FormTextFieldTypes = InferProps<typeof formTextFieldPropTypes> | AnyObject;
 
 function FormTextField({ name, ...other }: FormTextFieldTypes) {
   const { control } = useFormContext();

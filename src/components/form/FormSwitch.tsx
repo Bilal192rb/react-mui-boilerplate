@@ -1,12 +1,13 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { useFormContext, Controller } from 'react-hook-form';
 import { Switch, FormControlLabel } from '@mui/material';
+import { AnyObject } from '../../types';
 
 const formSwitchPropTypes = {
   name: PropTypes.string.isRequired,
 };
 
-type FormSwitchTypes = InferProps<typeof formSwitchPropTypes>;
+type FormSwitchTypes = InferProps<typeof formSwitchPropTypes> | AnyObject;
 
 function FormSwitch({ name, ...other }: FormSwitchTypes) {
   const { control } = useFormContext();

@@ -1,7 +1,7 @@
 import PropTypes, { InferProps } from 'prop-types';
 import { useFormContext, Controller } from 'react-hook-form';
 import { Radio, RadioGroup, FormHelperText, FormControlLabel } from '@mui/material';
-import { Any } from '../../types';
+import { Any, AnyObject } from '../../types';
 
 const formRadioGroupPropTypes = {
   name: PropTypes.string.isRequired,
@@ -9,7 +9,7 @@ const formRadioGroupPropTypes = {
   getOptionLabel: PropTypes.arrayOf(PropTypes.string),
 };
 
-type FormRadioGroupTypes = InferProps<typeof formRadioGroupPropTypes>;
+type FormRadioGroupTypes = InferProps<typeof formRadioGroupPropTypes> | AnyObject;
 
 function FormRadioGroup({ name, options, getOptionLabel, ...other }: FormRadioGroupTypes) {
   const { control } = useFormContext();
