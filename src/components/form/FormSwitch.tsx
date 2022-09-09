@@ -3,11 +3,11 @@ import { useFormContext, Controller } from 'react-hook-form';
 import { Switch, FormControlLabel } from '@mui/material';
 import { Any, AnyObject } from '../../types';
 
-const formSwitchPropTypes = {
+const FormSwitchPropTypes = {
   name: PropTypes.string.isRequired,
 };
 
-type FormSwitchTypes = InferProps<typeof formSwitchPropTypes> | AnyObject;
+type FormSwitchTypes = InferProps<typeof FormSwitchPropTypes> | AnyObject;
 
 function FormSwitch({ name, ...other }: FormSwitchTypes) {
   const { control } = useFormContext();
@@ -27,6 +27,6 @@ function FormSwitch({ name, ...other }: FormSwitchTypes) {
   );
 }
 
-FormSwitch.propTypes = formSwitchPropTypes;
+FormSwitch.propTypes = FormSwitchPropTypes;
 
 export { FormSwitch };

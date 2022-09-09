@@ -3,12 +3,12 @@ import { useFormContext, Controller } from 'react-hook-form';
 import { TextField } from '@mui/material';
 import { Any, AnyObject } from '../../types';
 
-const formSelectPropTypes = {
+const FormSelectPropTypes = {
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
 };
 
-type FormSelectTypes = InferProps<typeof formSelectPropTypes> | AnyObject;
+type FormSelectTypes = InferProps<typeof FormSelectPropTypes> | AnyObject;
 
 function FormSelect({ name, children, ...other }: FormSelectTypes) {
   const { control } = useFormContext();
@@ -34,6 +34,6 @@ function FormSelect({ name, children, ...other }: FormSelectTypes) {
   );
 }
 
-FormSelect.propTypes = formSelectPropTypes;
+FormSelect.propTypes = FormSelectPropTypes;
 
 export { FormSelect };

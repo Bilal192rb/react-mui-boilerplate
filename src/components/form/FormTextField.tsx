@@ -3,11 +3,11 @@ import { useFormContext, Controller } from 'react-hook-form';
 import { TextField } from '@mui/material';
 import { Any, AnyObject } from '../../types';
 
-const formTextFieldPropTypes = {
+const FormTextFieldPropTypes = {
   name: PropTypes.string.isRequired,
 };
 
-type FormTextFieldTypes = InferProps<typeof formTextFieldPropTypes> | AnyObject;
+type FormTextFieldTypes = InferProps<typeof FormTextFieldPropTypes> | AnyObject;
 
 function FormTextField({ name, ...other }: FormTextFieldTypes) {
   const { control } = useFormContext();
@@ -23,6 +23,6 @@ function FormTextField({ name, ...other }: FormTextFieldTypes) {
   );
 }
 
-FormTextField.propTypes = formTextFieldPropTypes;
+FormTextField.propTypes = FormTextFieldPropTypes;
 
 export { FormTextField };
