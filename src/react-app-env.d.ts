@@ -1,3 +1,7 @@
 /// <reference types="react-scripts" />
-declare module 'stylis'
-declare module 'nprogress'
+interface Window {
+  hljs?: any;
+}
+declare module 'stylis';
+declare module 'nprogress';
+declare module 'react-hook-form';

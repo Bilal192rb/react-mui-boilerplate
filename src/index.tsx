@@ -1,5 +1,6 @@
 import './locales/i18n';
-
+import './utils/highlight';
+import 'react-quill/dist/quill.snow.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AuthProvider } from './contexts/JWTContext';
