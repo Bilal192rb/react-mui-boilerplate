@@ -1,6 +1,10 @@
 import './locales/i18n';
 import './utils/highlight';
 import 'react-quill/dist/quill.snow.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+import 'react-lazy-load-image-component/src/effects/black-and-white.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { AuthProvider } from './contexts/JWTContext';
