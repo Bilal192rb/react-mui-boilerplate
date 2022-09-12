@@ -5,6 +5,7 @@ import RtlLayout from './components/RtlLayout';
 import NotistackProvider from './components/NotistackProvider';
 import { ProgressBarStyle } from './components/ProgressBar';
 import ThemeColorPresets from './components/ThemeColorPresets';
+import MotionLazyContainer from './components/animate/MotionLazyContainer';
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
         <ThemeLocalization>
           <RtlLayout>
             <NotistackProvider>
-              <ProgressBarStyle />
-              <Router />
+              <MotionLazyContainer>
+                <ProgressBarStyle />
+                <Router />
+              </MotionLazyContainer>
             </NotistackProvider>
           </RtlLayout>
         </ThemeLocalization>
