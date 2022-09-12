@@ -2,10 +2,11 @@ import PropTypes, { InferProps } from 'prop-types';
 import { useRef } from 'react';
 import { SnackbarProvider } from 'notistack';
 import { useTheme } from '@mui/material/styles';
-import { GlobalStyles, IconButton } from '@mui/material';
+import { GlobalStyles } from '@mui/material';
 import { Any } from '../types';
 import SnackbarIcon from './SnackbarIcon';
 import Iconify from './Iconify';
+import { IconButtonAnimate } from './animate';
 
 function SnackbarStyles() {
   const theme: Any = useTheme();
@@ -76,7 +77,7 @@ function NotistackProvider({ children }: NotistackProviderTypes) {
           error: <SnackbarIcon icon={'eva:alert-circle-fill'} color='error' />,
         }}
         action={(snackbarId) => (
-          <IconButton
+          <IconButtonAnimate
             size='small'
             onClick={() => {
               notistackRef.current.closeSnackbar(snackbarId);
@@ -84,7 +85,7 @@ function NotistackProvider({ children }: NotistackProviderTypes) {
             sx={{ p: 0.5 }}
           >
             <Iconify icon={'eva:close-fill'} />
-          </IconButton>
+          </IconButtonAnimate>
         )}
       >
         {children}
